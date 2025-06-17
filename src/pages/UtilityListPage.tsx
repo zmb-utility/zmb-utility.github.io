@@ -27,7 +27,7 @@ const mapImages: Record<string, string> = {
 
 const utilitiesData: Record<
   string,
-  Record<string, Record<string, Utility[]>>
+  Record<string, Record<"Smoke" | "Molly" | "Flash", Utility[]>>
 > = {
   "Dust II": {
     T: {
@@ -96,13 +96,21 @@ const UtilityListPage: React.FC = () => {
   }>();
   const navigate = useNavigate();
   const decodedMapName = mapName ? decodeURIComponent(mapName) : "Unknown Map";
-  const validSide = side === "T" || side === "CT" ? side : "T";
-  const validType = ["Smoke", "Molly", "Flash"].includes(type || "")
-    ? type
+  const validSide: "T" | "CT" = side === "T" || side === "CT" ? side : "T";
+  const validType: "Smoke" | "Molly" | "Flash" = [
+    "Smoke",
+    "Molly",
+    "Flash",
+  ].includes(type || "")
+    ? (type as "Smoke" | "Molly" | "Flash")
     : "Smoke";
+
+  // Debug: Log decodedMapName to check for mismatches
+  console.log("Decoded Map Name:", decodedMapName);
+
+  const backgroundImage = mapImages[decodedMapName] || "";
   const utilities =
     utilitiesData[decodedMapName]?.[validSide]?.[validType] || [];
-  const backgroundImage = mapImages[decodedMapName] || "";
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
