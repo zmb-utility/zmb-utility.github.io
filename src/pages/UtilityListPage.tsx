@@ -42,6 +42,17 @@ const utilitiesData: Record<
           instructions:
             "1. Stand in the corner\n2. Aim at the small dot and jump throw to smoke window.\n3. Aim above the blob and jump throw to smoke door.",
         },
+        {
+          id: "dust2-t-xbox",
+          name: "X-box",
+          description: "X-box Smoke",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/smokes/T_XBOX.mp4",
+          },
+          instructions: "Stand in the corner, aim at the top of the roof, and jump throw."
+
+        }
       ],
       Molly: [
         {
