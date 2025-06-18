@@ -1,18 +1,18 @@
 import { useEffect } from "react";
 
-interface ModalProps {
+interface MediaModalProps {
   isOpen: boolean;
   onClose: () => void;
-  mp4Src: string;
-  altText: string;
+  mediaElement: React.ReactNode;
+  title: string;
   instructions?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({
+const MediaModal: React.FC<MediaModalProps> = ({
   isOpen,
   onClose,
-  mp4Src,
-  altText,
+  mediaElement,
+  title,
   instructions,
 }) => {
   useEffect(() => {
@@ -38,18 +38,9 @@ const Modal: React.FC<ModalProps> = ({
           ×
         </button>
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="flex-[10] min-h-[500px]">
-            <video
-              src={mp4Src}
-              controls
-              autoPlay
-              loop
-              muted
-              className="w-full h-full rounded-lg object-contain"
-            />
-          </div>
+          <div className="flex-[1.5] min-h-[500px]">{mediaElement}</div>
           <div className="flex-1 text-white p-4">
-            <h3 className="text-2xl font-bold mb-6">{altText}</h3>
+            <h3 className="text-2xl font-bold mb-6">{title}</h3>
             {instructions ? (
               <p className="text-lg whitespace-pre-line">{instructions}</p>
             ) : (
@@ -62,4 +53,4 @@ const Modal: React.FC<ModalProps> = ({
   );
 };
 
-export default Modal;
+export default MediaModal;

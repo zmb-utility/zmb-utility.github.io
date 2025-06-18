@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Utility } from "../types";
-import Modal from "./Modal";
+import MediaModal from "./MediaModal";
 
 interface UtilityTileProps {
   utility: Utility;
@@ -10,12 +10,12 @@ const UtilityTile: React.FC<UtilityTileProps> = ({ utility }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
-    console.log("Tile clicked:", { id: utility.id, mp4: utility.mp4 });
-    if (utility.id === "dust2-t-smoke-b-window-and-door" && utility.mp4) {
+    console.log("Tile clicked:", { id: utility.id, media: utility.media });
+    if (utility.media) {
       console.log("Opening modal for", utility.name);
       setIsModalOpen(true);
     } else {
-      console.log(`Selected utility: ${utility.name}`);
+      console.log(`No media for utility: ${utility.name}`);
     }
   };
 
@@ -24,28 +24,76 @@ const UtilityTile: React.FC<UtilityTileProps> = ({ utility }) => {
     setIsModalOpen(false);
   };
 
+  const mediaElement = utility.media ? (
+    utility.media.type === "mp4" ? (
+      <video
+        src={utility.media.src}
+        controls
+        autoPlay
+        loop
+        muted
+        className="w-full h-full rounded-lg object-contain"
+      />
+    ) : (
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: 0,
+          paddingBottom: "62.500%",
+        }}
+      >
+        <iframe
+          allow="fullscreen"
+          allowFullScreen
+          height="100%"
+          src={utility.media.src}
+          width="100%"
+          style={{
+            border: "none",
+            width: "100%",
+            height: "100%",
+            position: "absolute",
+            left: 0,
+            top: 0,
+            overflow: "hidden",
+          }}
+        />
+      </div>
+    )
+  ) : null;
+
+  const thumbnailElement =
+    utility.media && utility.media.type === "mp4" ? (
+      <video
+        src={utility.media.src}
+        className="w-full h-48 object-cover group-hover:opacity-70 transition-opacity duration-300"
+        autoPlay
+        muted
+        loop
+        playsInline
+        onError={(e) =>
+          console.error("Thumbnail video load error:", utility.media?.src, e)
+        }
+      />
+    ) : (
+      <img
+        src={
+          utility.thumbnail ||
+          "https://via.placeholder.com/300x200?text=Utility"
+        }
+        alt={utility.name}
+        className="w-full h-48 object-cover group-hover:opacity-70 transition-opacity duration-300"
+      />
+    );
+
   return (
     <>
       <div
         className="relative group bg-gray-800 rounded-lg overflow-hidden shadow-lg cursor-pointer transform hover:scale-105 transition-transform duration-300 w-full"
         onClick={handleClick}
       >
-        {utility.mp4 ? (
-          <video
-            src={utility.mp4}
-            className="w-full h-48 object-cover group-hover:opacity-70 transition-opacity duration-300"
-            autoPlay
-            muted
-            loop
-            playsInline
-          />
-        ) : (
-          <img
-            src="https://via.placeholder.com/300x200?text=Utility"
-            alt={utility.name}
-            className="w-full h-48 object-cover group-hover:opacity-70 transition-opacity duration-300"
-          />
-        )}
+        {thumbnailElement}
         <div className="absolute inset-0 bg-black bg-opacity-0 flex items-center justify-center">
           <h3
             className="text-white text-xl font-bold"
@@ -61,12 +109,12 @@ const UtilityTile: React.FC<UtilityTileProps> = ({ utility }) => {
           <p className="text-white text-sm">{utility.description}</p>
         </div>
       </div>
-      {utility.id === "dust2-t-smoke-b-window-and-door" && utility.mp4 && (
-        <Modal
+      {utility.media && (
+        <MediaModal
           isOpen={isModalOpen}
           onClose={handleCloseModal}
-          mp4Src={utility.mp4}
-          altText={utility.name}
+          mediaElement={mediaElement}
+          title={utility.name}
           instructions={utility.instructions}
         />
       )}

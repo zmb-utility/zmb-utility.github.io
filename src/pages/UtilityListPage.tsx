@@ -35,7 +35,10 @@ const utilitiesData: Record<
           id: "dust2-t-smoke-b-window-and-door",
           name: "B Smoke Window and Door",
           description: "Smokes B Site Window and Door.",
-          mp4: "/assets/dust2/smokes/T_B_WINDOW_AND_DOOR.mp4",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/smokes/T_B_WINDOW_AND_DOOR.mp4",
+          },
           instructions:
             "1. Stand in the corner\n2. Aim at the small dot and jump throw to smoke window.\n3. Aim above the blob and jump throw to smoke door.",
         },
@@ -50,7 +53,9 @@ const utilitiesData: Record<
       Flash: [],
     },
     CT: {
-      Smoke: [], Molly: [], Flash: [],
+      Smoke: [],
+      Molly: [],
+      Flash: [],
     },
   },
   Mirage: {
@@ -96,14 +101,19 @@ const UtilityListPage: React.FC = () => {
   const navigate = useNavigate();
   const decodedMapName = mapName ? decodeURIComponent(mapName) : "Unknown Map";
   const validSide: "T" | "CT" = side === "T" || side === "CT" ? side : "T";
-  const validType: "Smoke" | "Molly" | "Flash" = ["Smoke", "Molly", "Flash"].includes(type || "")
-    ? type as "Smoke" | "Molly" | "Flash"
+  const validType: "Smoke" | "Molly" | "Flash" = [
+    "Smoke",
+    "Molly",
+    "Flash",
+  ].includes(type || "")
+    ? (type as "Smoke" | "Molly" | "Flash")
     : "Smoke";
 
   console.log("Decoded Map Name:", decodedMapName);
 
   const backgroundImage = mapImages[decodedMapName] || "";
-  const utilities = utilitiesData[decodedMapName]?.[validSide]?.[validType] || [];
+  const utilities =
+    utilitiesData[decodedMapName]?.[validSide]?.[validType] || [];
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
