@@ -52,7 +52,18 @@ const utilitiesData: Record<
           },
           instructions: "Stand in the corner, aim at the top of the roof, and jump throw."
 
-        }
+        },
+        {
+          id: "dust2-t-long-a-cross",
+          name: "Long A Cross",
+          description: "Long cross smoke to take A",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/smokes/T_LONG_A_CROSS.mp4",
+          },
+          instructions: "Stand at the corner of the dumpster and regular throw"
+
+        },
       ],
       Molly: [
         {
@@ -61,7 +72,18 @@ const utilitiesData: Record<
           description: "Burns Car at Long A.",
         },
       ],
-      Flash: [],
+      Flash: [
+        {
+          id: "dust2-long-a-pop-flash",
+          name: "Long A Pop",
+          description: "Pop flash CTs playing corner",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/flashes/LONG_A_FLASH.mp4",
+          },
+          instructions: "Jump throw"
+        },
+      ],
     },
     CT: {
       Smoke: [],
