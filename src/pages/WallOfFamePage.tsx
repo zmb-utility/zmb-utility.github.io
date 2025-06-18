@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import UtilityTile from "../components/UtilityTile";
 import type { Utility } from "../types";
 
-// import billPFP from "../assets/pfp/iambill.jpg";
+import billPFP from "../assets/pfp/iambill.jpg";
 import reitzyPFP from "../assets/pfp/reitzy.jpg";
 
 const fameData: Utility[] = [
@@ -17,6 +17,26 @@ const fameData: Utility[] = [
       src: "https://streamable.com/e/yzz0o3?",
     },
     instructions: "There's no way this should have hit.",
+  },
+  {
+    id: "brian-fame-2",
+    name: "Clean Deagle 3k",
+    description: "",
+    thumbnail: reitzyPFP,
+    media: {
+      type: "streamable",
+      src: "https://streamable.com/e/d9alo3?",
+    },
+  },
+  {
+    id: "billy-fame-1",
+    name: "Nice Little 4k Hold",
+    description: "",
+    thumbnail: billPFP,
+    media: {
+      type: "streamable",
+      src: "https://streamable.com/e/w5xhie?",
+    },
   },
 ];
 
