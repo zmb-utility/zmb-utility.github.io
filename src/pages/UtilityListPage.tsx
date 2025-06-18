@@ -64,6 +64,17 @@ const utilitiesData: Record<
           instructions: "Stand at the corner of the dumpster and regular throw"
 
         },
+        {
+          id: "dust2-t-ct-from-xbox",
+          name: "CT Spawn",
+          description: "CT spawn smoke from X-box",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/smokes/T_SMOKE_CT_FROM_XBOX.mp4",
+          },
+          instructions: "1. Crouch in the corner\n2. Aim at the little bolt\n3. Jump throw WHILE crouching"
+
+        },
       ],
       Molly: [
         {
