@@ -17,6 +17,17 @@ const shameData: Utility[] = [
     instructions:
       "Went from a wall of fame clip to a wall of shame clip real fast.",
   },
+  {
+    id: "billy-shame-2",
+    name: "Sorry Ryan",
+    description: "",
+    thumbnail: billPFP,
+    media: {
+      type: "streamable",
+      src: "https://www.youtube.com/embed/OWGcFNrQYiY?si=tlBPVTfIuNt8GbOj",
+    },
+    instructions: "",
+  },
 ];
 
 const WallOfShamePage: React.FC = () => {

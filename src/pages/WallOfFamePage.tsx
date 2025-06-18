@@ -38,6 +38,16 @@ const fameData: Utility[] = [
       src: "https://streamable.com/e/w5xhie?",
     },
   },
+  {
+    id: "billy-fame-2",
+    name: "CSGO Montage",
+    description: "",
+    thumbnail: billPFP,
+    media: {
+      type: "streamable",
+      src: "https://www.youtube.com/embed/9wRVUYQ22Pc?si=Vo9bcRCvW71D2yos",
+    },
+  },
 ];
 
 const WallOfFamePage: React.FC = () => {
