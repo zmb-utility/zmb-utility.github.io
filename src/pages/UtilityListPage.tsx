@@ -114,7 +114,19 @@ const utilitiesData: Record<
           instructions: "Stand in the corner, aim above the window and jump throw"
         },
       ],
-      Molly: [],
+      Molly: [
+        {
+          id: "dust2-molly-b-site",
+          name: "B Site over Window",
+          description: "Molly B site and under window",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/mollies/B_SITE.mp4",
+          },
+          instructions: "1. Stand in the corner under jump spot\n2. Aim in the middle of the wood boards\n3. Jump throw"
+
+        },
+      ],
       Flash: [
         {
           id: "dust2-ct-a-pop-flash",
