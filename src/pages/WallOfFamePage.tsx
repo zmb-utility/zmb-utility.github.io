@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import UtilityTile from "../components/UtilityTile";
 import type { Utility } from "../types";
 
-import billPFP from "../assets/pfp/iambill.jpg";
+// import billPFP from "../assets/pfp/iambill.jpg";
 import reitzyPFP from "../assets/pfp/reitzy.jpg";
 
 const fameData: Utility[] = [
