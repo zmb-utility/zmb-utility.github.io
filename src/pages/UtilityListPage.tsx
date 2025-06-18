@@ -70,6 +70,11 @@ const utilitiesData: Record<
           id: "dust2-t-molly-1",
           name: "Car Molly",
           description: "Burns Car at Long A.",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/mollies/CAR.mp4",
+          },
+          instructions: "1. Stand on the blue barrel.\n2. Aim at the doorknob.\n3. Jump throw"
         },
       ],
       Flash: [
