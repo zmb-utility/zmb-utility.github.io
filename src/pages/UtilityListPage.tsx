@@ -91,9 +91,31 @@ const utilitiesData: Record<
       ],
     },
     CT: {
-      Smoke: [],
+      Smoke: [
+        {
+          id: "dust2-ct-a-long-doors",
+          name: "Long Doors A",
+          description: "Smokes long doors from CT.",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/smokes/CT_A_LONG_DOORS.mp4",
+          },
+          instructions: "Stand in the corner, aim above the window and jump throw"
+        },
+      ],
       Molly: [],
-      Flash: [],
+      Flash: [
+        {
+          id: "dust2-ct-a-pop-flash",
+          name: "Long A Pop Flash",
+          description: "Pop flash T's running out doors.",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/flashes/CT_LONG_POP.mp4",
+          },
+          instructions: "Run and throw at the wall sticking out."
+        },
+      ],
     },
   },
   Mirage: {

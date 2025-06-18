@@ -2,7 +2,6 @@ import MapTile from "../components/MapTile";
 import Header from "../components/Header";
 import type { Map } from "../types";
 
-// Import thumbnail images
 import dust2Img from "../assets/maps/dust2.jpg";
 import mirageImg from "../assets/maps/mirage.jpg";
 import infernoImg from "../assets/maps/inferno.jpg";
