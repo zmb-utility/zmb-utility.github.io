@@ -126,6 +126,17 @@ const utilitiesData: Record<
           instructions: "1. Stand in the corner under jump spot\n2. Aim in the middle of the wood boards\n3. Jump throw"
 
         },
+        {
+          id: "dust2-molly-b-plat",
+          name: "B Platform over doors",
+          description: "Molly B plat over doors.",
+          media: {
+            type: "mp4",
+            src: "/assets/dust2/mollies/B_PLAT.mp4",
+          },
+          instructions: "1. Stand in the corner\n2. Aim at the iron\n3. Jump throw"
+
+        },
       ],
       Flash: [
         {

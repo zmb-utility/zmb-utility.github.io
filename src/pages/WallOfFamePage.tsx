@@ -5,6 +5,7 @@ import type { Utility } from "../types";
 
 import billPFP from "../assets/pfp/iambill.jpg";
 import reitzyPFP from "../assets/pfp/reitzy.jpg";
+// import makPFP from "../assets/pfp/mak.jpg";
 
 const fameData: Utility[] = [
   {
