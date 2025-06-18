@@ -7,5 +7,7 @@ export interface Utility {
   id: string;
   name: string;
   description: string;
-  image?: string;
+  mp4?: string; 
+  poster?: string;
+  instructions?: string;
 }

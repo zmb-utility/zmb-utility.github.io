@@ -12,7 +12,6 @@ import anubisImg from "../assets/maps/anubis.jpg";
 import trainImg from "../assets/maps/train.jpg";
 import overpassImg from "../assets/maps/overpass.jpg";
 
-// Map images for background
 const mapImages: Record<string, string> = {
   "Dust II": dust2Img,
   Mirage: mirageImg,
@@ -33,10 +32,12 @@ const utilitiesData: Record<
     T: {
       Smoke: [
         {
-          id: "dust2-t-smoke-xbox",
-          name: "Xbox Smoke",
-          description: "Blocks mid doors from catwalk.",
-          image: "/assets/dust2/smokes/d2dance.gif",
+          id: "dust2-t-smoke-b-window-and-door",
+          name: "B Smoke Window and Door",
+          description: "Smokes B Site Window and Door.",
+          mp4: "/assets/dust2/smokes/T_B_WINDOW_AND_DOOR.mp4",
+          instructions:
+            "1. Stand in the corner\n2. Aim at the small dot and jump throw to smoke window.\n3. Aim above the blob and jump throw to smoke door.",
         },
       ],
       Molly: [
@@ -49,9 +50,7 @@ const utilitiesData: Record<
       Flash: [],
     },
     CT: {
-      Smoke: [],
-      Molly: [],
-      Flash: [],
+      Smoke: [], Molly: [], Flash: [],
     },
   },
   Mirage: {
@@ -97,20 +96,14 @@ const UtilityListPage: React.FC = () => {
   const navigate = useNavigate();
   const decodedMapName = mapName ? decodeURIComponent(mapName) : "Unknown Map";
   const validSide: "T" | "CT" = side === "T" || side === "CT" ? side : "T";
-  const validType: "Smoke" | "Molly" | "Flash" = [
-    "Smoke",
-    "Molly",
-    "Flash",
-  ].includes(type || "")
-    ? (type as "Smoke" | "Molly" | "Flash")
+  const validType: "Smoke" | "Molly" | "Flash" = ["Smoke", "Molly", "Flash"].includes(type || "")
+    ? type as "Smoke" | "Molly" | "Flash"
     : "Smoke";
 
-  // Debug: Log decodedMapName to check for mismatches
   console.log("Decoded Map Name:", decodedMapName);
 
   const backgroundImage = mapImages[decodedMapName] || "";
-  const utilities =
-    utilitiesData[decodedMapName]?.[validSide]?.[validType] || [];
+  const utilities = utilitiesData[decodedMapName]?.[validSide]?.[validType] || [];
 
   return (
     <div className="min-h-screen bg-gray-900 text-white flex flex-col">
@@ -123,7 +116,6 @@ const UtilityListPage: React.FC = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* Overlay for dimming */}
         <div className="absolute inset-0 bg-black bg-opacity-80"></div>
         <div className="w-full max-w-6xl mx-auto relative z-10">
           <div className="flex items-center justify-between mb-8">
