@@ -9,7 +9,7 @@ import reitzyPFP from "../assets/pfp/reitzy.jpg";
 const fameData: Utility[] = [
   {
     id: "brian-fame-1",
-    name: "Leaping AK Headshot",
+    name: "Air reitzy",
     description: "reitzy",
     thumbnail: reitzyPFP,
     media: {
