@@ -8,7 +8,7 @@ const shameData: Utility[] = [
   {
     id: "billy-shame-1",
     name: "Big Whiff",
-    description: "",
+    description: "I am Bill",
     thumbnail: billPFP,
     media: {
       type: "streamable",
@@ -20,7 +20,7 @@ const shameData: Utility[] = [
   {
     id: "billy-shame-2",
     name: "Sorry Ryan",
-    description: "",
+    description: "I am Bill",
     thumbnail: billPFP,
     media: {
       type: "streamable",

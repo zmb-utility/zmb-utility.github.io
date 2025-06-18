@@ -10,7 +10,7 @@ const fameData: Utility[] = [
   {
     id: "brian-fame-1",
     name: "Leaping AK Headshot",
-    description: "",
+    description: "reitzy",
     thumbnail: reitzyPFP,
     media: {
       type: "streamable",
@@ -21,7 +21,7 @@ const fameData: Utility[] = [
   {
     id: "brian-fame-2",
     name: "Clean Deagle 3k",
-    description: "",
+    description: "reitzy",
     thumbnail: reitzyPFP,
     media: {
       type: "streamable",
@@ -31,7 +31,7 @@ const fameData: Utility[] = [
   {
     id: "billy-fame-1",
     name: "Nice Little 4k Hold",
-    description: "",
+    description: "I am Bill",
     thumbnail: billPFP,
     media: {
       type: "streamable",
@@ -41,7 +41,7 @@ const fameData: Utility[] = [
   {
     id: "billy-fame-2",
     name: "CSGO Montage",
-    description: "",
+    description: "I am Bill",
     thumbnail: billPFP,
     media: {
       type: "streamable",
