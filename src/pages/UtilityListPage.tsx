@@ -213,6 +213,28 @@ const utilitiesData: Record<
           instructions:
             "1. Stand in the corner by this post\n 2. Aim at the light\n3. Regular throw",
         },
+        {
+          id: "train-t-camera-from-lockers",
+          name: "Camera from Lockers",
+          description: "Smokes camera on A from lockers of upper B",
+          media: {
+            type: "mp4",
+            src: "/assets/train/smokes/T_CAMERA_SMOKE_FROM_LOCKERS.mp4",
+          },
+          instructions:
+            "1. Shoot out the window\n2. Line up on the bottom stair\n3. Aim and regular throw",
+        },
+        {
+          id: "train-t-red-train",
+          name: "Red Train / E-box",
+          description: "Smokes off E-box vision from A main",
+          media: {
+            type: "mp4",
+            src: "/assets/train/smokes/T_RED_TRAIN.mp4",
+          },
+          instructions:
+            "1. Stand in the corner\n2. Aim at the top of the dumpster\n3. Jump throw",
+        },
       ],
       Molly: [
         {
@@ -227,7 +249,19 @@ const utilitiesData: Record<
             "1. Stand in the corner by this post\n2. Aim at the corner of the wall\n3. Run and throw",
         },
       ],
-      Flash: [],
+      Flash: [
+        {
+          id: "train-t-godflash",
+          name: "GODFLASH",
+          description: "",
+          media: {
+            type: "mp4",
+            src: "/assets/train/flashes/T_GODFLASH.mp4",
+          },
+          instructions:
+            "1. Stand in front of the green sign\n2. Aim at the middle of the electrical box\n3. Jump throw",
+        },
+      ],
     },
     CT: {
       Smoke: [],
