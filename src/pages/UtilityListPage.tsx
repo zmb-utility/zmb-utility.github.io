@@ -50,8 +50,8 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/smokes/T_XBOX.mp4",
           },
-          instructions: "Stand in the corner, aim at the top of the roof, and jump throw."
-
+          instructions:
+            "Stand in the corner, aim at the top of the roof, and jump throw.",
         },
         {
           id: "dust2-t-long-a-cross",
@@ -61,8 +61,7 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/smokes/T_LONG_A_CROSS.mp4",
           },
-          instructions: "Stand at the corner of the dumpster and regular throw"
-
+          instructions: "Stand at the corner of the dumpster and regular throw",
         },
         {
           id: "dust2-t-ct-from-xbox",
@@ -72,8 +71,8 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/smokes/T_SMOKE_CT_FROM_XBOX.mp4",
           },
-          instructions: "1. Crouch in the corner\n2. Aim at the little bolt\n3. Jump throw WHILE crouching"
-
+          instructions:
+            "1. Crouch in the corner\n2. Aim at the little bolt\n3. Jump throw WHILE crouching",
         },
       ],
       Molly: [
@@ -85,7 +84,8 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/mollies/CAR.mp4",
           },
-          instructions: "1. Stand on the blue barrel.\n2. Aim at the doorknob.\n3. Jump throw"
+          instructions:
+            "1. Stand on the blue barrel.\n2. Aim at the doorknob.\n3. Jump throw",
         },
       ],
       Flash: [
@@ -97,7 +97,7 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/flashes/LONG_A_FLASH.mp4",
           },
-          instructions: "Jump throw"
+          instructions: "Jump throw",
         },
       ],
     },
@@ -111,7 +111,8 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/smokes/CT_A_LONG_DOORS.mp4",
           },
-          instructions: "Stand in the corner, aim above the window and jump throw"
+          instructions:
+            "Stand in the corner, aim above the window and jump throw",
         },
       ],
       Molly: [
@@ -123,8 +124,8 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/mollies/B_SITE.mp4",
           },
-          instructions: "1. Stand in the corner under jump spot\n2. Aim in the middle of the wood boards\n3. Jump throw"
-
+          instructions:
+            "1. Stand in the corner under jump spot\n2. Aim in the middle of the wood boards\n3. Jump throw",
         },
         {
           id: "dust2-molly-b-plat",
@@ -134,8 +135,8 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/mollies/B_PLAT.mp4",
           },
-          instructions: "1. Stand in the corner\n2. Aim at the iron\n3. Jump throw"
-
+          instructions:
+            "1. Stand in the corner\n2. Aim at the iron\n3. Jump throw",
         },
       ],
       Flash: [
@@ -147,7 +148,7 @@ const utilitiesData: Record<
             type: "mp4",
             src: "/assets/dust2/flashes/CT_LONG_POP.mp4",
           },
-          instructions: "Run and throw at the wall sticking out."
+          instructions: "Run and throw at the wall sticking out.",
         },
       ],
     },
@@ -177,8 +178,74 @@ const utilitiesData: Record<
     CT: { Smoke: [], Molly: [], Flash: [] },
   },
   Train: {
-    T: { Smoke: [], Molly: [], Flash: [] },
-    CT: { Smoke: [], Molly: [], Flash: [] },
+    T: {
+      Smoke: [
+        {
+          id: "train-t-camera-smoke",
+          name: "Smoke Camera from T Spawn",
+          description: "Smoke camera",
+          media: {
+            type: "mp4",
+            src: "/assets/train/smokes/T_IVY_SMOKE.mp4",
+          },
+          instructions:
+            "1. Stand in the corner by the pillar\n2. Aim at the corner of the roof\n3. Jump throw",
+        },
+        {
+          id: "train-t-z-smoke",
+          name: "Smoke Z from T Spawn",
+          description: "",
+          media: {
+            type: "mp4",
+            src: "/assets/train/smokes/T_Z_SMOKE.mp4",
+          },
+          instructions:
+            "1. Stand in the corner by the pillar\n2. Aim at the cross section in the roof\n3. Jump throw",
+        },
+        {
+          id: "train-t-z-smoke-from-b",
+          name: "Smoke Z from upper B",
+          description: "",
+          media: {
+            type: "mp4",
+            src: "/assets/train/smokes/T_Z_FROM_B.mp4",
+          },
+          instructions:
+            "1. Stand in the corner by this post\n 2. Aim at the light\n3. Regular throw",
+        },
+      ],
+      Molly: [
+        {
+          id: "train-t-molly-b-site",
+          name: "B Site Train",
+          description: "B site molly from upper B",
+          media: {
+            type: "mp4",
+            src: "/assets/train/mollies/T_MOLLY_B_SITE.mp4",
+          },
+          instructions:
+            "1. Stand in the corner by this post\n2. Aim at the corner of the wall\n3. Run and throw",
+        },
+      ],
+      Flash: [],
+    },
+    CT: {
+      Smoke: [],
+      Molly: [
+        {
+          id: "train-ct-molly-a-main",
+          name: "A Main",
+          description: "Fast molly for A Main",
+          media: {
+            type: "mp4",
+            src: "/assets/train/mollies/CT_MOLLY_A_MAIN.mp4",
+          },
+          instructions:
+            "1. Aim at the red spot by the rubble on the ground\n2. Run until you reach the corner of the wall\n3. Jump throw while running",
+        },
+      ],
+      Flash: [],
+    },
   },
   Overpass: {
     T: { Smoke: [], Molly: [], Flash: [] },
