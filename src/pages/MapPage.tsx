@@ -1,5 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
+import { utilitiesData } from "../data"; // Import from data.ts
 import dust2Img from "../assets/maps/dust2.jpg";
 import mirageImg from "../assets/maps/mirage.jpg";
 import infernoImg from "../assets/maps/inferno.jpg";
@@ -28,6 +30,41 @@ const MapPage: React.FC = () => {
   const navigate = useNavigate();
   const decodedMapName = mapName ? decodeURIComponent(mapName) : "Unknown Map";
   const backgroundImage = mapImages[decodedMapName] || "";
+
+  // State to store utility counts
+  const [utilityCounts, setUtilityCounts] = useState<{
+    T: { Smoke: number; Molly: number; Flash: number };
+    CT: { Smoke: number; Molly: number; Flash: number };
+  }>({
+    T: { Smoke: 0, Molly: 0, Flash: 0 },
+    CT: { Smoke: 0, Molly: 0, Flash: 0 },
+  });
+
+  // Compute utility counts from utilitiesData
+  useEffect(() => {
+    const counts = {
+      T: { Smoke: 0, Molly: 0, Flash: 0 },
+      CT: { Smoke: 0, Molly: 0, Flash: 0 },
+    };
+
+    if (utilitiesData[decodedMapName]) {
+      const sides: ("T" | "CT")[] = ["T", "CT"];
+      const types: ("Smoke" | "Molly" | "Flash")[] = [
+        "Smoke",
+        "Molly",
+        "Flash",
+      ];
+
+      sides.forEach((side) => {
+        types.forEach((type) => {
+          const utilities = utilitiesData[decodedMapName][side][type] || [];
+          counts[side][type] = utilities.filter((u) => u.media).length;
+        });
+      });
+    }
+
+    setUtilityCounts(counts);
+  }, [decodedMapName]);
 
   const handleButtonClick = (
     side: "T" | "CT",
@@ -69,19 +106,19 @@ const MapPage: React.FC = () => {
                 className="bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg text-lg font-bold transition-colors duration-300"
                 onClick={() => handleButtonClick("T", "Smoke")}
               >
-                Smoke
+                Smoke ({utilityCounts.T.Smoke})
               </button>
               <button
                 className="bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg text-lg font-bold transition-colors duration-300"
                 onClick={() => handleButtonClick("T", "Molly")}
               >
-                Molly
+                Molly ({utilityCounts.T.Molly})
               </button>
               <button
                 className="bg-red-600 hover:bg-red-700 text-white py-4 rounded-lg text-lg font-bold transition-colors duration-300"
                 onClick={() => handleButtonClick("T", "Flash")}
               >
-                Flash
+                Flash ({utilityCounts.T.Flash})
               </button>
             </div>
             {/* CT Column */}
@@ -93,19 +130,19 @@ const MapPage: React.FC = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg text-lg font-bold transition-colors duration-300"
                 onClick={() => handleButtonClick("CT", "Smoke")}
               >
-                Smoke
+                Smoke ({utilityCounts.CT.Smoke})
               </button>
               <button
                 className="bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg text-lg font-bold transition-colors duration-300"
                 onClick={() => handleButtonClick("CT", "Molly")}
               >
-                Molly
+                Molly ({utilityCounts.CT.Molly})
               </button>
               <button
                 className="bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg text-lg font-bold transition-colors duration-300"
                 onClick={() => handleButtonClick("CT", "Flash")}
               >
-                Flash
+                Flash ({utilityCounts.CT.Flash})
               </button>
             </div>
           </div>
