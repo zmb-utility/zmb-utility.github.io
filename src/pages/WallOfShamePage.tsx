@@ -28,6 +28,17 @@ const shameData: Utility[] = [
     },
     instructions: "",
   },
+  {
+    id: "billy-shame-3",
+    name: "Sorry Stefano",
+    description: "I am Bill",
+    thumbnail: billPFP,
+    media: {
+      type: "streamable",
+      src: "https://streamable.com/e/jv78hc",
+    },
+    instructions: "",
+  },
 ];
 
 const WallOfShamePage: React.FC = () => {
