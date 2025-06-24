@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "../components/Header";
-import { utilitiesData } from "../data"; // Import from data.ts
+import { utilitiesData } from "../data";
 import dust2Img from "../assets/maps/dust2.jpg";
 import mirageImg from "../assets/maps/mirage.jpg";
 import infernoImg from "../assets/maps/inferno.jpg";

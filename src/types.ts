@@ -6,7 +6,7 @@ export interface Map {
 export interface Utility {
   id: string;
   name: string;
-  description: string; // Description to appear at the bottom of a UtilityTile
+  description?: string; // Description to appear at the bottom of a UtilityTile
   thumbnail?: string; // Optional thumbnail image path
   media?: {
     type: "mp4" | "streamable"; // mp4 for video loaded from assets. Streamable for an embedded video from Streamable
