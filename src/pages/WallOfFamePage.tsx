@@ -5,6 +5,7 @@ import type { Utility } from "../types";
 
 import billPFP from "../assets/pfp/iambill.jpg";
 import reitzyPFP from "../assets/pfp/reitzy.jpg";
+import kvothePFP from "../assets/pfp/kvothe.jpg";
 // import makPFP from "../assets/pfp/mak.jpg";
 
 const fameData: Utility[] = [
@@ -47,6 +48,16 @@ const fameData: Utility[] = [
     media: {
       type: "streamable",
       src: "https://www.youtube.com/embed/9wRVUYQ22Pc?si=Vo9bcRCvW71D2yos",
+    },
+  },
+  {
+    id: "kvothe-fame-1",
+    name: "Clean Deag 4k",
+    description: "Kvothe",
+    thumbnail: kvothePFP,
+    media: {
+      type: "streamable",
+      src: "https://streamable.com/e/280p1j?",
     },
   },
 ];
