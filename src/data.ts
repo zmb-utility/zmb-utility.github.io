@@ -146,7 +146,75 @@ export const utilitiesData: Record<
     CT: { Smoke: [], Molly: [], Flash: [] },
   },
   Ancient: {
-    T: { Smoke: [], Molly: [], Flash: [] },
+    T: { Smoke: [
+      {
+          id: "ancient-t-redroom-smoke",
+          name: "Smoke Redroom from T Spawn",
+          description: "Smoke red room stairs",
+          media: {
+            type: "mp4",
+            src: "/assets/ancient/smokes/T_REDROOM.mp4",
+          },
+          instructions:
+            "Aim and jump throw",
+        },
+        {
+          id: "ancient-t-donut-smoke",
+          name: "Smoke Mid Donut from T Spawn",
+          description: "Smoke donut",
+          media: {
+            type: "mp4",
+            src: "/assets/ancient/smokes/T_DONUT.mp4",
+          },
+          instructions:
+            "Aim and jump throw",
+        },
+        {
+          id: "ancient-t-b-left-and-right",
+          name: "Smoke left and right B site",
+          description: "Smoke Left and Right side of B",
+          media: {
+            type: "mp4",
+            src: "/assets/ancient/smokes/T_LEFT_AND_RIGHT_B.mp4",
+          },
+          instructions:
+            "1. Stand in the corner\n2. Aim at the X and jump throw\n3. Aim at the middle stone thing and jump throw",
+        },
+        {
+          id: "ancient-t-a-ct",
+          name: "Smoke A site CT",
+          description: "Smoke CT from T side",
+          media: {
+            type: "mp4",
+            src: "/assets/ancient/smokes/T_A_CT.mp4",
+          },
+          instructions:
+            "Aim and jump throw",
+        },
+        {
+          id: "ancient-t-a-donut",
+          name: "Smoke Donut on A site",
+          description: "Smoke donut on A site",
+          media: {
+            type: "mp4",
+            src: "/assets/ancient/smokes/T_A_SITE_DONUT.mp4",
+          },
+          instructions:
+            "Aim and jump throw",
+        },
+    ], Molly: [
+      {
+          id: "ancient-t-molly-cubby",
+          name: "Molly Cubby",
+          description: "Molotov for cubby position",
+          media: {
+            type: "mp4",
+            src: "/assets/ancient/molly/T_B_CUBBY.mp4",
+          },
+          instructions:
+            "Aim and throw",
+        },
+    ], Flash: [] },
     CT: { Smoke: [], Molly: [], Flash: [] },
   },
   Anubis: {
