@@ -6,6 +6,7 @@ import type { Utility } from "../types";
 import billPFP from "../assets/pfp/iambill.jpg";
 import reitzyPFP from "../assets/pfp/reitzy.jpg";
 import kvothePFP from "../assets/pfp/kvothe.jpg";
+import saffdeefPFP from "../assets/pfp/saffdeef.gif";
 // import makPFP from "../assets/pfp/mak.jpg";
 
 const fameData: Utility[] = [
@@ -58,6 +59,16 @@ const fameData: Utility[] = [
     media: {
       type: "streamable",
       src: "https://streamable.com/e/280p1j?",
+    },
+  },
+  {
+    id: "saffeedf-fame-1",
+    name: "Con Air 1v4 Clutch",
+    description: "Always trying to show off in front of elders",
+    thumbnail: saffdeefPFP,
+    media: {
+      type: "streamable",
+      src: "https://streamable.com/e/nmm0yj?",
     },
   },
 ];
