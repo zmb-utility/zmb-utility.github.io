@@ -14,3 +14,21 @@ export interface Utility {
   };
   instructions?: string; // Instructions for a piece of utility or can be used as a clip description
 }
+
+// Steam API
+export interface SteamUserStatsResponse {
+  playerstats: {
+    steamID: string;
+    gameName: string;
+    stats: { name: string; value: number }[];
+    achievements?: { name: string; achieved: number }[];
+  };
+}
+
+export interface SteamVanityURLResponse {
+  response: {
+    steamid?: string;
+    success: number;
+    message?: string;
+  };
+}

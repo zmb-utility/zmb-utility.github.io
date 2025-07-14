@@ -24,6 +24,14 @@ const Header: React.FC = () => {
               Wall of Shame
             </Link>
           </li>
+          <li>
+            <Link
+              to="/stats"
+              className="hover:text-gray-300 transition-colors duration-200"
+            >
+              Player Stats
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

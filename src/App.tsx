@@ -4,6 +4,7 @@ import MapPage from "./pages/MapPage";
 import UtilityListPage from "./pages/UtilityListPage";
 import WallOfFamePage from "./pages/WallOfFamePage";
 import WallOfShamePage from "./pages/WallOfShamePage";
+import PlayerStatsPage from "./pages/PlayerStatsPage";
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Route path="/map/:mapName/:side/:type" element={<UtilityListPage />} />
         <Route path="/wall-of-shame" element={<WallOfShamePage />} />
         <Route path="/wall-of-fame" element={<WallOfFamePage />} />
+        <Route path="/stats" element={<PlayerStatsPage />} />
       </Routes>
     </BrowserRouter>
   );
