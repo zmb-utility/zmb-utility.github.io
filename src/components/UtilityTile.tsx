@@ -10,17 +10,13 @@ const UtilityTile: React.FC<UtilityTileProps> = ({ utility }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
-    console.log("Tile clicked:", { id: utility.id, media: utility.media });
     if (utility.media) {
-      console.log("Opening modal for", utility.name);
       setIsModalOpen(true);
     } else {
-      console.log(`No media for utility: ${utility.name}`);
     }
   };
 
   const handleCloseModal = () => {
-    console.log("Closing modal");
     setIsModalOpen(false);
   };
 

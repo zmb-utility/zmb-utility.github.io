@@ -41,8 +41,6 @@ const UtilityListPage: React.FC = () => {
     ? (type as "Smoke" | "Molly" | "Flash")
     : "Smoke";
 
-  console.log("Decoded Map Name:", decodedMapName);
-
   const backgroundImage = mapImages[decodedMapName] || "";
   const utilities =
     utilitiesData[decodedMapName]?.[validSide]?.[validType] || [];
